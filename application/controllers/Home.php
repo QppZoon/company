@@ -21,6 +21,15 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$data['meno'] = "Karol";
+		$data['dnes'] = date("j.n.Y");
+        $data['teploty']['pondelok'] = 25.0;
+        $data['teploty']['utorok'] = 21.0;
+        $data['teploty']['streda'] = 35.0;
+        $data['teploty']['stvrtok'] = 2.0;
+        $data['teploty']['piatok'] = -15.0;
+        $data['teploty']['sobota'] = 20.0;
+        $data['teploty']['nedela'] = 10.0;
+
 		$this->load->view('template/header');
         $this->load->view('template/navigation');
         $this->load->view('home',$data);
