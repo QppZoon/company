@@ -22,6 +22,7 @@ class Home extends CI_Controller {
 	{
 		$data['meno'] = "Karol";
 		$this->load->view('template/header');
+        $this->load->view('template/navigation');
         $this->load->view('home',$data);
         $this->load->view('template/footer');
 	}
